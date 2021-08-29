@@ -1,0 +1,21 @@
+<!-- //////*ngFor (loop) =let <variable> of <nameArray>//////-->
+<div *ngFor =" let i of courses ">
+  {{i}};
+</div>
+<!-- /////// ng-template angular element used to render HTML Templates/////-->
+
+<!-- ////// *ngIf (condition)= "Condition ; Then (if Condition True) else (if Condition False)" -->
+<div *ngif = "courses.length>0 ;then true else false ">
+<ng-template #true>
+  <p> i have Array </p>
+</ng-template>
+
+<ng-template #false>
+
+ <p> i dont have any Array<p>
+</ng-template>
+
+<!-- ////// SwitchCase  ////-->
+<ul [ngSwitch]="courses">
+  <li *ngSwitchCase="'html'">HTML</li>
+</ul>
